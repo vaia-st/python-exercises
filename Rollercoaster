@@ -1,14 +1,23 @@
 print("Welcome to the rollercoaster!")
 height = int(input("What is your height in cm? "))
+price = 0
 
 if height >= 120:
     print("You can ride the rollercoaster :)")
     age = int(input("How old are you? "))
     if age < 12:
-        print("Your ticket costs USD 5")
+        price = 5
     elif age >= 12 and age <= 18:
-        print("Your ticket costs USD 7")
+        price = 7
     elif age > 18:
-        print("Your ticket costs USD 12")
+        price = 12
+
+    photo = input("Would you like your photo taken? Type 'Yes' or 'No' ")
+    if photo == "Yes":
+        price_with_foto = price + 3
+        print("The total of your ticket is USD {}".format(price_with_foto))
+    else:
+        print("The total of your ticket is USD {}".format(price))
+
 else:
     print("Sorry, you cannot ride the rollercoaster :(")
