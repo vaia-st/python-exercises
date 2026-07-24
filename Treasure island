@@ -1,0 +1,24 @@
+print("Welcome to Treasure Island.")
+print("Your mission is to find the treasure.")
+
+left_right = input("Do you want to go left or right?\n").lower()
+if left_right == "left":
+    print("Good choice!")
+    swim_wait = input("Do you want to swim or wait?\n").lower()
+    if swim_wait == "wait":
+        print("That paid off!")
+        doors = input("You see 3 doors in front of you: "
+                      "yellow, red, blue. "
+                      "Which one do you choose?\n").lower()
+        if doors == "yellow":
+            print(" You found the treasure!")
+        elif doors == "red":
+            print("You've been burned by fire!")
+        elif doors == "blue":
+            print("You've been eaten by beasts!")
+        else:
+            print("You lose!")
+    else:
+        print("Oh no! You got eaten by crocodiles!")
+else:
+    print("Oh no! You fell off the cliff!")
