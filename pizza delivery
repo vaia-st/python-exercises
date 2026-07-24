@@ -1,0 +1,22 @@
+print("Welcome to Pizza Planet!")
+print("Make your order here.")
+size = input("What size pizza do you want? Please type S, M or L: ")
+vegaroni = input("Do you want vegan pepperoni on your pizza? Please type Y or N: ")
+extra_cheese = input("Do you want extra vegan cheese? Please type Y or N: ")
+
+if size == "S":
+    price = 15
+elif size == "M":
+    price = 20
+elif size == "L":
+    price = 25
+
+if vegaroni == "Y" and size == "S":
+    price += 2
+elif vegaroni == "Y" and size == "M" or size == "L":
+    price += 3
+
+if extra_cheese == "Y":
+    price += 1
+
+print(f"Your total to pay is USD {price}")
